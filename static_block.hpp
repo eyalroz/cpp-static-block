@@ -1,12 +1,13 @@
 /**
- * static_block.hpp
+ * @file static_block.hpp
  *
- * An implementation of a Java-style static block, in C++ (and potentially a
- * GCC/clang extension to avoid warnings). Almost, but not quite, valid C.
- * Partially inspired by Andrei Alexandrescu's Scope Guard and
+ * @brief An implementation of a Java-style static block, in C++ (and potentially a
+ * GCC/clang extension to avoid warnings). 
+ *
+ * @note Partially inspired by Andrei Alexandrescu's Scope Guard and
  * discussions on stackoverflow.com
  *
- * By Eyal Rozenberg <eyalroz@technion.ac.il>
+ * By Eyal Rozenberg <eyalroz1@gmx.com>
  *
  * Licensed under the Apache License v2.0:
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -75,6 +76,5 @@
 static void function_name(); \
 static int var_name __attribute((unused)) = (function_name(), 0) ; \
 static void function_name()
-
 
 #endif // STATIC_BLOCK_HPP_
